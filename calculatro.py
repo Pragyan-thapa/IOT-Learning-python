@@ -5,6 +5,7 @@ while user_input != "exit":
     user_input = input("enter here: ")
     befor_operator = ""
     after_operator = ""
+    
     if "+" in user_input:
         operator_index = user_input.index("+")
         for character in user_input[0:operator_index]:
@@ -16,11 +17,11 @@ while user_input != "exit":
         try:
             number_one = int(befor_operator)
             number_two = int(after_operator)
+            print("addition is:",number_one + number_two)
         except ValueError:
             print("Invalid input, please enter again")
-        if not ValueError:
-            print("addition is:",number_one + number_two)
-                
+
+                 
     elif "-" in user_input:
         operator_index = user_input.index("-")
         for character in user_input[0:operator_index]:
@@ -32,12 +33,11 @@ while user_input != "exit":
         try:
             number_one = int(befor_operator)
             number_two = int(after_operator)
+            print("subtraction is:",number_one - number_two)
         except ValueError:
             print("Invalid input, please enter again")
-        if not ValueError:
-            print("subtraction is:",number_one - number_two)
         
-
+        
     elif "*" in user_input:
         operator_index = user_input.index("*")
         for character in user_input[0:operator_index]:
@@ -49,10 +49,10 @@ while user_input != "exit":
         try:
             number_one = int(befor_operator)
             number_two = int(after_operator)
+            print("multiplication is:",number_one * number_two)
         except ValueError:
             print("Invalid input, please enter again")
-        if not ValueError:
-            print("multiplication is:",number_one * number_two)
+        
 
     elif "/" in user_input:
         operator_index = user_input.index("/")
@@ -65,10 +65,10 @@ while user_input != "exit":
         try:
             number_one = int(befor_operator)
             number_two = int(after_operator)
+            print("division is:",number_one / number_two)
         except ValueError:
             print("Invalid input, please enter again")
-        if not ValueError:
-            print("division is:",number_one / number_two)
+        
 
 
     elif "%" in user_input:
@@ -82,8 +82,14 @@ while user_input != "exit":
         try:
             number_one = int(befor_operator)
             number_two = int(after_operator)
+            print("modulus is:",number_one % number_two)    
         except ValueError:
             print("Invalid input, please enter again")
-        if not ValueError:
-            print("modulus is:",number_one % number_two)
+        
 
+    elif user_input=="exit":
+        continue
+    else:
+        print("invalid input")
+
+print("good bye")

@@ -12,3 +12,4 @@ def find_duplicate(d1):
     return(duplicates)
 
 print(find_duplicate(l1))
+print(l1.count(1))
